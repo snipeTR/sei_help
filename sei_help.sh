@@ -1,3 +1,6 @@
+sudo wget https://raw.githubusercontent.com/snipeTR/sei_help/main/sei_help.sh> /dev/null 2>&1
+chmod +x ./sei_help.sh> /dev/null 2>&1
+sudo mv ./sei_help.sh /usr/local/bin/helpsei> /dev/null 2>&1
 echo -e '\e[0m\e[31m=============== \e[0m\e[32mCommands that will make your job easier. Please note..\e[0m\e[31m===================\e[0m'
 echo -e '\e[0m\e[36mcheck LOGS:\t\t\t\t \e[0m\e[32mjournalctl -ujournalctl -u seid -f -o cat\e[0m'
 echo -e '\e[0m\e[36msend sei token to other address:\t \e[0m\e[32mseid tx bank send \033[33;4m<WalletName> <ToAddress> <amount>\e[0m\e[32m000000usei -y\e[0m'
