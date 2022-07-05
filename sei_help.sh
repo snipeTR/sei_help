@@ -10,5 +10,5 @@ echo -e '\e[0m\e[36mNode info command:\t\t\t \e[0m\e[32mseid status 2>&1 | jq .N
 echo -e '\e[0m\e[36mWallet import/recover from mnemonic:\t \e[0m\e[32mseid keys add \033[33;4m<wallet name>\e[0m\e[32m --recover\e[0m'
 echo -e '\e[0m\e[36mseid binary path:\t\t\t \e[0m\e[32mtype seid\e[0m'
 echo -e '\e[0m\e[36mWallet name info:\t\t\t \e[0m\e[32mseid keys list --output json | jq .[0].name\e[0m'
-echo -e '\e[0m\e[36msei testnet address info:\t \e[0m\e[32mseid keys list --output json | jq .[0].address\e[0m'
-echo -e '\e[0m\e[36msei testnet pubkey info:\t \e[0m\e[32mseid keys list --output json | jq .[0].pubkey\e[0m'
+echo -e '\e[0m\e[36msei testnet address info:\t\t \e[0m\e[32mseid keys list --output json | jq .[0].address\e[0m'
+echo -e '\e[0m\e[36msei testnet pubkey info:\t\t \e[0m\e[32mseid keys list --output json | jq .[0].pubkey\e[0m'
