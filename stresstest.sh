@@ -5,10 +5,10 @@
 read -r -p $'Please write your installed address in NODE.: ' saddress
 seid query bank balances $saddress> /dev/null 2>&1
 until [ $? -eq 0 ]
-do
-read -r -p $'Your ADDRESS is \e[1m\e[31mincorrect\e[0m. check and re-enter.: ' saddress
-seid query bank balances $saddress> /dev/null 2>&1
-done
+  do
+    read -r -p $'Your ADDRESS is \e[1m\e[31mincorrect\e[0m. check and re-enter.: ' saddress
+    seid query bank balances $saddress> /dev/null 2>&1
+  done
 echo -e "from:\e[1m\e[32m$saddress\e[0m"
 #*******************************
 
@@ -19,10 +19,10 @@ echo -e "from:\e[1m\e[32m$saddress\e[0m"
 read -r -p $'Enter the address to which you will bulk send..: ' raddress
 seid query bank balances $saddress> /dev/null 2>&1
 until [ $? -eq 0 ]
-do
-read -r -p $'Your ADDRESS is \e[1m\e[31mincorrect\e[0m. check and re-enter.: ' raddress
-seid query bank balances $saddress> /dev/null 2>&1
-done
+  do
+    read -r -p $'Your ADDRESS is \e[1m\e[31mincorrect\e[0m. check and re-enter.: ' raddress
+    seid query bank balances $saddress> /dev/null 2>&1
+  done
 echo -e "to:\e[1m\e[32m$raddress\e[0m"
 #*******************************
 
@@ -35,11 +35,11 @@ balance=$(seid query bank balances $saddress -o│json | jq -r .balances[0].amou
 minsendsei=2000
 minbalance=100
 until [ ! $minbalance -le $minsendsei ]
-do
- read -r -p $'amount of \e[1m\e[32musei\e[0m to test? (one sei=1000000\e[1m\e[32musei\e[0m \e[1m\e[31mone million\e[0m) Max=$balance: ' minbalance
- if [ ! $minbalance -le $balance ]; then echo -e "\e[1m\e[31minsufficient balance\e[0m. amount in wallet $balance\e[1m\e[32musei\e[0m"; fi
- if [ $minbalance -le $minsendsei ]; then echo -e "The value you enter cannot be less than $minsendsei."; fi
-done
+  do
+    read -r -p $'amount of \e[1m\e[32musei\e[0m to test? (one sei=1000000\e[1m\e[32musei\e[0m \e[1m\e[31mone million\e[0m) Max=$balance: ' minbalance
+    if [ ! $minbalance -le $balance ]; then echo -e "\e[1m\e[31minsufficient balance\e[0m. amount in wallet $balance\e[1m\e[32musei\e[0m"; fi
+    if [ $minbalance -le $minsendsei ]; then echo -e "The value you enter cannot be less than $minsendsei."; fi
+  done
 #*******************************
 
 
@@ -49,7 +49,7 @@ done
 echo "Please enter your Wallet name."
 read -r -p $'Type "what" if you dont know your wallet name.: ' wname
 if [ $wname == "what" ]; then
- wname=$(seid keys list --output json | jq -r .[0].name )
+  wname=$(seid keys list --output json | jq -r .[0].name )
 fi
 echo -e "You are wallet name \e[1m\e[31m$wname\e[0m"
 #*******************************
