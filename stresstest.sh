@@ -55,7 +55,7 @@ echo -e "You are wallet name \e[1m\e[31m$wname\e[0m"
 #*******************************
         
 
-#The maximum number of loops is determined by dividing the address balance by the minimum shipping fee.
+#The maximum number of loops is determined by dividing the address balance by the minimum transaction fee.
 
 #sample data
 #minbalance=1000000usei (1 sei)
