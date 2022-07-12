@@ -7,7 +7,7 @@ echo -e '\e[0m\e[36msync info command:\t\t\t \e[0m\e[32mseid status 2>&1 | jq .S
 echo -e '\e[0m\e[36mwallet list:\t\t\t\t \e[0m\e[32mseid keys list\e[0m'
 echo -e '\e[0m\e[36mvalidator info command:\t\t\t \e[0m\e[32mseid status 2>&1 | jq .ValidatorInfo\e[0m'
 echo -e '\e[0m\e[36mNode info command:\t\t\t \e[0m\e[32mseid status 2>&1 | jq .NodeInfo\e[0m'
-echo -e '\e[0m\e[36mShow node id:\t\t\t \e[0m\e[32mseid tendermint show-node-id\e[0m'
+echo -e '\e[0m\e[36mShow node id:\t\t\t\t \e[0m\e[32mseid tendermint show-node-id\e[0m'
 echo -e '\e[0m\e[36mWallet import/recover from mnemonic:\t \e[0m\e[32mseid keys add \033[33;4m<wallet name>\e[0m\e[32m --recover\e[0m'
 echo -e '\e[0m\e[36mseid binary path:\t\t\t \e[0m\e[32mtype seid\e[0m'
 echo -e '\e[0m\e[36mWallet name info:\t\t\t \e[0m\e[32mseid keys list --output json | jq .[0].name\e[0m'
