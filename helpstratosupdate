@@ -1,0 +1,3 @@
+﻿sudo wget https://raw.githubusercontent.com/snipeTR/sei_help/main/stratos_help.sh> /dev/null 2>&1
+chmod +x ./stratos_help.sh> /dev/null 2>&1
+sudo mv ./stratos_help.sh /usr/local/bin/helpstratos> /dev/null 2>&1
